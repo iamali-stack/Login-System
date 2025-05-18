@@ -2,7 +2,7 @@ I'll help you create a comprehensive description for this project. Based on the 
 
 Here's a professional description of your project:
 
-# Smart Login System
+# 🔐 Smart Login System
 
 A modern, responsive web-based authentication system that provides a seamless user experience for both login and registration processes.
 

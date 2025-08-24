@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+
+
+  <!-- ===== Stylesheets ===== -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+<!-- Bootstrap CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- ===== Fonts ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet" />
+
+  <!-- ===== Font Awesome ===== -->
+  <link rel="stylesheet" href="fontawesome-all.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/brands.min.css" />
+
+</head>
+
+<body>
+  <div class="login-container">
+    <div class="text-center mb-4">
+        <div class="icon-container">
+            <div class="icon-laptop">
+                <span class="icon-user">👤</span>
+            </div>
+            <span class="decoration decoration-1"></span>
+            <span class="decoration decoration-2"></span>
+            <span class="decoration decoration-3"></span>
+        </div>
+        <h1 class="h3 mb-3 fw-bold">Smart Login System</h1>
+    </div>
+    
+    <ul class="nav nav-tabs nav-fill" id="loginTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login-panel" type="button" role="tab" aria-controls="login-panel" aria-selected="true">Login</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup-panel" type="button" role="tab" aria-controls="signup-panel" aria-selected="false">Sign Up</button>
+        </li>
+    </ul>
+    
+    <div class="tab-content" id="loginTabsContent">
+        <div class="tab-pane fade show active" id="login-panel" role="tabpanel" aria-labelledby="login-tab">
+            <form>
+                <div class="mb-3">
+                    <input id="userEmailLogin" type="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                    <input id="userPasswordLogin" type="password" class="form-control" placeholder="Enter your password" required>
+                </div>
+                <button onclick="checkDataLogin(this); clearFields();" type="submit" class="btn btn-login">LOGIN</button>
+            </form>
+            <div class="text-center mt-3">
+                <small class="text-muted">Don't have an account? <a href="#" class="text-decoration-none fw-bold" onclick="document.getElementById('signup-tab').click();">Sign Up</a></small>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade" id="signup-panel" role="tabpanel" aria-labelledby="signup-tab">
+            <form>
+                <div class="mb-3">
+                    <input id="userName" oninput="validateAllInputs(this)" type="text" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <div class="mb-3">
+                    <input id="userEmail" oninput="validateAllInputs(this)" type="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                    <input id="userPassword" oninput="validateAllInputs(this)" type="password" class="form-control" placeholder="Enter password" required>
+                </div>
+                <button onclick="saveData(); clearFields();" type="button" class="btn btn-login">SIGN UP</button>
+            </form>
+            <div class="text-center mt-3">
+                <small class="text-muted">You have an account? <a href="#" class="text-decoration-none fw-bold" onclick="document.getElementById('login-tab').click();">Signin</a></small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- ===== Scripts ===== -->
+  <script src="java.js"></script>
+</body>
+</html>

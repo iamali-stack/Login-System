@@ -11,9 +11,9 @@ var emailvalidation=false;
 var passwordvalidation=false;
 // Regex patterns
 var regex = {
-    userName: /^[a-zA-Z]{3,9}$/,
-    userEmail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    userPassword: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/
+    userName: /^[a-zA-Z]{3,20}$/,                   
+    userEmail: /^.+@.+\..+$/,                         
+    userPassword: /^.{6,}$/                         
 };
 
 function validateAllInputs(elem) {
